@@ -1,0 +1,93 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 21%);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}
+body > div {
+    height: 100vh;
+    width: 50vw;
+    display: grid;
+    place-items: center;
+}
+
+#right_container{
+    background-color: rgb(138, 55, 55);
+}
+
+body > div > section > p {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+section {
+    padding: 1em;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+
+fieldset { 
+    border: white solid 1px;
+    width: fit-content;
+}
+
+#left_container fieldset {
+    width: 10em;
+}
+
+#left_container form * {
+    margin: 1em;
+}
+
+fieldset legend {
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+}
+
+ul > li{
+    line-height: 2em;
+    font-style: italic;
+    padding: 0 1em 0 1em;
+}
+
+ul > li > b {
+    font-style: normal;
+}
+
+ul > li > a {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+ul > li > img {
+    width: 5em;
+    border: solid white 1px;
+}
+
+/* grid template media queries */
+@media screen and (min-width: 1024px){
+ body {
+     grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+@media screen and (max-width: 1023px){
+    body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
